@@ -1,4 +1,10 @@
-@env_s
+-- -----------------------------------------------------------------------------------
+-- File Name    : inst.sql
+-- Author       : Thiago Escodino (thiago@escti.net)
+-- Description  : Lista informações sobre a instancia conectada.
+-- Call Syntax  : @inst.sql
+-- Last Modified: 07/07/2022
+-- -----------------------------------------------------------------------------------
 
 col host_name for a20
 col instance_name for a15
