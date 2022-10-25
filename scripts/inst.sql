@@ -6,6 +6,7 @@
 -- Last Modified: 07/07/2022
 -- -----------------------------------------------------------------------------------
 
+set lines 150 pages 2000
 col host_name for a20
 col instance_name for a15
 col startup_time for a18
