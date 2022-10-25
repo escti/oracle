@@ -36,5 +36,3 @@ col user clear
 col current_schema clear
 col version clear
 col status clear
-
-@env_l
