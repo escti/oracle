@@ -1,3 +1,10 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : d_resize.sql
+-- Author       : Thiago Escodino (thiago@escti.net)
+-- Description  : Gera comandos para devolver espaço alocado nos datafiles para o SO.
+-- Call Syntax  : @d_resize.sql
+-- Last Modified: 07/07/2022
+-- -----------------------------------------------------------------------------------
 select 'alter database datafile'||' '''||file_name||''''||' resize '||round(highwater+2)||' '||'m'||';' from (
 select /*+ rule */
    a.tablespace_name,
