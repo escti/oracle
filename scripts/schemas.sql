@@ -1,3 +1,10 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : schemas.sql
+-- Author       : Thiago Escodino (thiago@escti.net)
+-- Description  : Lista os schemas com objetos e seus respectivos tamanhos.
+-- Call Syntax  : @schemas.sql
+-- Last Modified: 07/07/2022
+-- -----------------------------------------------------------------------------------
 col schema for a20
 set lines 150 pages 2000
 
@@ -15,8 +22,7 @@ OWNER NOT IN('ANONYMOUS', 'APEX_040200', 'APEX_PUBLIC_USER', 'APPQOSSYS',
 'ORDSYS', 'OUTLN', 'PM', 'SCOTT', 'SH', 'SI_INFORMTN_SCHEMA', 'SPATIAL_CSW_ADMIN_USR',
 'SPATIAL_WFS_ADMIN_USR', 'SYS', 'SYSBACKUP', 'SYSDG', 'SYSKM', 'SYSTEM',
 'WMSYS', 'XDB', 'SYSMAN', 'RMAN', 'RMAN_BACKUP', 'OWBSYS', 'OWBSYS_AUDIT',
-'APEX_030200', 'MGMT_VIEW', 'OJVMSYS', 'XS$NULL', 'OLAPSYS', 'SECURITY',
-'GSYS', 'GSYS_ZABBIX', 'GSYSPRTG', 'PERFSTAT', 'ZBXGLOBAL')
+'APEX_030200', 'MGMT_VIEW', 'OJVMSYS', 'XS$NULL', 'OLAPSYS', 'SECURITY','PERFSTAT')
 GROUP BY
 OWNER
 ORDER BY
