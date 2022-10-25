@@ -1,3 +1,10 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : gopdb.sql
+-- Author       : Thiago Escodino (thiago@escti.net)
+-- Description  : Lista os PDBs da instancia, conecta em um deles e mostra um resumo.
+-- Call Syntax  : @gopdb.sql
+-- Last Modified: 07/07/2022
+-- -----------------------------------------------------------------------------------
 set lines 150 pages 2000
 col host_name for a20
 col instance_name for a15
