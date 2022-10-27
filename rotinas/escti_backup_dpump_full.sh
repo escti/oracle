@@ -23,6 +23,7 @@ export ORACLE_SID="$SID"
 
 DATA=`date --date="0 days ago" +%Y%m%d%H%M%S` 
 DATA_LOG=`date  +%d-%m-%Y_%H:%M:%S` 
+mkdir -p $DIR/$DATA; 
 
 # Variaveis do email
 # REMETENTE=servidor@cliente.com.br
@@ -50,8 +51,6 @@ find ${DIR} -name '*.tar.gz' -mtime +$RETENCAO -exec rm -rf {} \;
 find ${DIR} -name '*.log' -mtime +6 -exec rm {} \; 
 
 echo  $(date  +%d-%m-%Y_%H:%M:%S) - iniciando backup dpump:
-
-mkdir -p $DIR/$DATA; 
 
 sqlplus -s "/ as sysdba" <<-EOF 
 create pfile='$DIR/$DATA/PF.ora' from memory;
