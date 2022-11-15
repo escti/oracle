@@ -1,5 +1,5 @@
 set term off
-store set &__DIR_TEMP.\sqlenv replace
+store set /tmp/sqlenv replace
 set term on
 set ver off
 set feed off
@@ -40,5 +40,5 @@ order by freepercent asc;
 set head off
 
 
-@&__DIR_TEMP.\sqlenv
+@/tmp/sqlenv
 set term on
