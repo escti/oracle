@@ -27,3 +27,4 @@ spo off
 select count (*) FROM V$SESSION WHERE STATUS = 'INACTIVE' and USERNAME not in ('ORACLE','SYS');
 @/home/oracle/tmp/_inativas.txt
 select count (*) FROM V$SESSION WHERE STATUS = 'INACTIVE' and USERNAME not in ('ORACLE','SYS');
+@/tmp/sqlenv
