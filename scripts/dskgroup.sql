@@ -1,0 +1,15 @@
+set lines 150 pages 2000
+col NAME for a10
+col STATE for a10
+col TYPE for a10
+col TOTAL_MB for 999,999,999
+col USABLE_FILE_MB for 999,999,999
+SELECT
+	NAME,
+	STATE,
+	TYPE,
+	TOTAL_MB,
+	USABLE_FILE_MB,
+	ROUND((TOTAL_MB - USABLE_FILE_MB)/TOTAL_MB * 100, 1) AS PERCENT_FULL
+FROM
+	v$asm_diskgroup;
