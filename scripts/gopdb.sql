@@ -21,8 +21,7 @@ FROM dba_pdbs
 ORDER BY 1;
 
 
-ALTER SESSION
-SET container=&pdbname;
+ALTER SESSION SET container=&pdbname;
 
 
 SELECT decode(instr(host_name, '.'), 0, host_name, substr(host_name, 1, instr(host_name, '.')-1)) host_name,
@@ -35,7 +34,7 @@ SELECT decode(instr(host_name, '.'), 0, host_name, substr(host_name, 1, instr(ho
        VERSION,
        logins,
        d.open_mode
-FROM v$instance i,
-     v$database d,
+FROM gv$instance i,
+     gv$database d,
 	 dba_pdbs p
 	 ;
